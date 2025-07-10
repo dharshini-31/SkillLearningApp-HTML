@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learner Dashboard - Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="icon.png" alt="Dashboard Icon" width="36" height="36" class="me-2">
+      Learner Dashboard
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="lhome.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="utest.html">Assessments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lcontact.html">Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="lpro.html">
+            <i class="bi bi-person-circle" style="font-size: 1.3rem;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!---Offcanvas-->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="settingsCanvas" aria-labelledby="settingsCanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="settingsCanvasLabel">Settings</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="home.html" class="btn btn-outline-dark">Go to Home</a><br><br>
+    <button class="btn btn-outline-dark">Logout</button>
+  </div>
+</div>
+
+
+<!-- Profile Header -->
+<div class="bg-secondary text-white py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h1 class="display-6 fw-bold mb-2">Profile Settings</h1>
+        <p class="mb-0">Manage your account information and preferences</p>
+      </div>
+<div class="col-md-4 text-end h3">
+  <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#settingsCanvas" aria-controls="settingsCanvas">
+    <i class="bi bi-gear"></i>
+  </button>
+</div>
+    </div>
+  </div>
+</div>
+
+<!-- Profile Content -->
+<div class="container my-5">
+  <div class="row">
+    <!-- Profile Card -->
+    <div class="col-lg-4 mb-4">
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4 text-center">
+          <div class="position-relative d-inline-block mb-3">
+            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center p-4" style="width: 120px; height: 120px;">
+              <i class="bi bi-person-fill text-primary" style="font-size: 3rem;"></i>
+            </div>
+            
+          </div>
+          <h4 class="fw-bold mb-1">Dharshini</h4>
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Information -->
+    <div class="col-lg-8">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-white border-bottom">
+          <h5 class="mb-0 fw-bold">Personal Information</h5>
+        </div>
+        <div class="card-body p-4">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">First Name</label>
+                <input type="text" class="form-control" value="Dharshini">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Last Name</label>
+                <input type="text" class="form-control" value="Kumar">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Email</label>
+                <input type="email" class="form-control" value="dharshini.kumar@email.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Phone</label>
+                <input type="tel" class="form-control" value="+91 9876543210">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Date of Birth</label>
+                <input type="date" class="form-control" value="1995-06-15">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Gender</label>
+                <select class="form-select">
+                  <option selected>Female</option>
+                  <option>Male</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold">Address</label>
+                <textarea class="form-control" rows="3">123 Main Street, Coimbatore, Tamil Nadu, India - 641001</textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row mt-4">
+
+    <div class="col-12 text-center">
+      <button class="btn btn-outline-secondary  btn-sm me-3">Save Changes</button>
+      <button class="btn btn-outline-secondary btn-sm me-3">Cancel</button>
+      <button class="btn btn-outline-secondary  btn-sm">Delete Account</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

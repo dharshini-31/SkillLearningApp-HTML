@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Support</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="icon.png" alt="Dashboard Icon" width="36" height="36" class="me-2">
+      Instructor Dashboard
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="Tcourse.html">My Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tadd.html">Add Course</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tanalytics.html">Analytics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="profile.html">
+            <i class="bi bi-person-circle" style="font-size: 1.3rem;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="bg-secondary text-white py-5">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold mb-3">
+      Elearn
+    </h1>
+    <p class="lead mb-4">
+      Unlock a powerful, user-friendly learning platform designed for both instructors and learners.
+      Easily curate content, build courses, deliver interactive lessons, and track progress.
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <span class="badge bg-light text-dark fs-6 px-3 py-2">
+        <i class="bi bi-check-circle-fill text-success me-1"></i>Easy to Use
+      </span>
+      <span class="badge bg-light text-dark fs-6 px-3 py-2">
+        <i class="bi bi-check-circle-fill text-success me-1"></i>24/7 Support
+      </span>
+      <span class="badge bg-light text-dark fs-6 px-3 py-2">
+        <i class="bi bi-check-circle-fill text-success me-1"></i>Secure Platform
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row g-4 mb-5">
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body p-4">
+          <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 p-3">
+            <i class="bi bi-envelope-at-fill text-primary fs-3"></i>
+          </div>
+          <h5 class="fw-bold text-primary">Email Support</h5>
+          <p class="text-muted mb-1">elearn@gmail.com</p>
+                  </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body p-4">
+          <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 p-3">
+            <i class="bi bi-telephone-fill text-success fs-3"></i>
+          </div>
+          <h5 class="fw-bold text-success">Phone Support</h5>
+          <p class="text-muted mb-1">9876543210</p>
+                 </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-sm text-center">
+        <div class="card-body p-4">
+          <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3 p-3">
+            <i class="bi bi-chat-dots-fill text-info fs-3"></i>
+          </div>
+          <h5 class="fw-bold text-info">Live Chat</h5>
+          <p class="text-muted mb-1">Instant Support</p>
+                 </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card border-0 shadow-lg">
+        <div class="card-header bg-white border-0 py-4 text-center">
+          <h2 class="fw-bold text-primary mb-1">
+            Send Us a Message
+          </h2>
+          </div>
+        <div class="card-body p-5">
+          <form>
+            <div class="row g-4 mb-4">
+              <div class="col-md-6">
+                <label for="name" class="form-label fw-semibold">Your Name</label>
+                <div class="input-group input-group-lg">
+                                   <input type="text" class="form-control border-primary border-opacity-25" id="name" placeholder="Enter your name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label fw-semibold">Your Email</label>
+                <div class="input-group input-group-lg">
+                                    <input type="email" class="form-control border-primary border-opacity-25" id="email" placeholder="Enter your email" required>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="subject" class="form-label fw-semibold">Subject</label>
+              <div class="input-group input-group-lg">
+                
+                <input type="text" class="form-control border-primary border-opacity-25" id="subject" placeholder="What's this about?" required>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label fw-semibold">Message</label>
+              <textarea class="form-control form-control-lg border-primary border-opacity-25" id="message" rows="5" placeholder="Tell us more..." required></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg py-3">
+              Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>  
+  
