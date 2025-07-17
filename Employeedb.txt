@@ -1,0 +1,157 @@
+use Employee
+
+db.createCollection("records")
+
+db.records.insertMany([
+  { id: 1, name: "anu", age: 22, salary: 30000, bonus: 5000, department: "hr" }, 
+  { id: 2, name: "babu", age: 25, salary: 40000, bonus: 6000, department: "it" }, 
+  { id: 3, name: "carol", age: 28, salary: 45000, bonus: 5500, department: "finance" },
+  { id: 4, name: "dharsh", age: 28, salary: 25000, bonus: 5500, department: "manager" }, 
+  { id: 5, name: "elena", age: 28, salary: 65000, bonus: 4500, department: "it" }
+]) 
+
+show dbs
+
+show collections
+
+db.records.find({ age: { $gt: 23 } })
+
+db.records.find({ age: { $lte: 23 } })
+
+db.records.find({ department: "it" })
+
+db.records.find({})
+
+db.records.find(
+  {department:{$ne:"it"}}
+)
+
+db.records.find(
+  {department:{$nin:["if","finance"]}}
+)
+
+db.records.find(
+  {department:{$nin:["it","finance"]}}
+)
+
+db.records.find({
+  $and: [
+    { department: "it" },
+    { age: { $gt: 25 } }
+  ]
+})
+
+
+
+
+db.records.find({
+  $or: [
+    { department: "hr" },
+    { department: "manager" }
+  ]
+})
+
+
+db.records.updateOne(
+  { name: "anu" },
+  { $set: { name: "Anu Priya" } }
+)
+
+
+db.records.updateOne(
+  { },
+  { $set: { email: "elena@example.com" } }
+)
+
+
+db.records.updateMany(
+  {},
+  { $set: { email: "elena@example.com" } }
+)
+
+
+db.records.updateMany({},[ { $set: { Pay: { $add: ["$salary", "$bonus"] } } }])
+
+
+db.records.updateMany(
+  {},
+  [
+{ $set: { NetPay: { $subtract: ["$salary", "$bonus"] } }
+ }  ] 
+)
+
+
+db.records.updateMany(
+  {},
+  [
+    {
+      $set: {
+       Pay: { $multiply: ["$salary", "$bonus"] } 
+      }
+    }
+  ]
+)
+
+
+db.records.updateMany(
+  {},
+  [
+    {
+      $set: {
+        Pay: { $divide: ["$salary", "$bonus"] } 
+      }
+    }
+  ]
+)
+
+
+db.records.updateMany(
+  {},
+  [
+    {
+      $set: {
+        salary: { $sqrt: "$salary" } 
+      }
+    }
+  ]
+)
+
+
+
+db.records.deleteOne({ name: "anu" })
+
+
+db.records.deleteOne({ salary:{$gte:2000} })
+
+
+db.students.deleteMany({ age: { $lt: 18 } })
+
+
+db.students.deleteMany({ })
+
+
+db.students.deleteMany({
+  $or: [
+    { salary: { $lt: 18 } },
+    { department: "hr" }
+  ]
+})
+
+db.records.replaceOne(
+  { id: 3 },
+  { id: 3, name: "chris", age: 30, salary: 50000, bonus: 6000, department: "sales" }
+)
+
+show collections
+
+show dbs
+
+db.records.drop()
+
+
+db.dropdatabase()
+
+
+
+
+
